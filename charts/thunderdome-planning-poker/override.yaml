@@ -1,0 +1,21 @@
+# helm install <path of the chart> -f override.yaml
+
+image:
+  repository: stevenweathers/thunderdome-planning-poker
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+configmapName: ""
+configmap:
+  app_domain: ".127.0.0.1"
+  cookie_secure: "false"
+  smtp_secure: "false"
+  DB_NAME: pokerapp
+  DB_USER: pokerapp
+  DB_PASS: Hello@123
+  DB_PORT: "5432"
+  DB_HOST: postgres-hl
