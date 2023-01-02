@@ -12,7 +12,7 @@ postgresql:
     postgresql:
       auth:
         database: "pokerapp"
-        password: "Hello@123"
+        password: "SGVsbG9AMTIz"
         username: "pokerapp"
       service:
         ports:
