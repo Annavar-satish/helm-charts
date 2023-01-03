@@ -74,7 +74,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: http://agileplanner.improwised.dev
+    - host: http://agileplanner-improwised.dev
       paths:
         - path: /
           pathType: ImplementationSpecific
