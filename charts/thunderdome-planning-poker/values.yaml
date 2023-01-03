@@ -11,8 +11,9 @@ postgresql:
   global:
     postgresql:
       auth:
+        postgresPassword: "postgres"
         database: "pokerapp"
-        password: "SGVsbG9AMTIz"
+        password: "Hello@123"
         username: "pokerapp"
       service:
         ports:
