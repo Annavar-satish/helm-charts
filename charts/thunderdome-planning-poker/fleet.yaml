@@ -42,7 +42,7 @@ imageScans:
       order: asc 
 
   # specify images to scan
-  image: "hub.docker.com/r/annavarsatish/agileplanner" 
+  image: "index.docker.io/annavarsatish/agileplanner" 
 
   # Specify the tag name, it has to be unique in the same bundle
   tagName: test-scan
