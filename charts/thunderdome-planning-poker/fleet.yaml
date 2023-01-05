@@ -42,7 +42,7 @@ imageScans:
       order: asc 
 
   # specify images to scan
-  image: "stevenweathers/thunderdome-planning-poker"
+  image: "annavarsatish/agileplanner"
 
   # Specify the tag name, it has to be unique in the same bundle
   tagName: test-scan
