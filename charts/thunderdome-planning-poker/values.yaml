@@ -25,7 +25,7 @@ image:
   repository: index.docker.io/annavarsatish/agilevoting  # {"$imagescan": "test-scan"}
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "main.1673262736.382afd6"
+  tag: "v1.1.0-1673263644-28e0219"
 
 imagePullSecrets: []
 nameOverride: ""
