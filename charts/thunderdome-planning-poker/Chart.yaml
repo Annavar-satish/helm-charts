@@ -1,6 +1,6 @@
 apiVersion: v2
-name: thunderdome-planning-poker
-description: A Helm chart for thunderdome-planning-poker
+name: agileplanner
+description: A Helm chart for agileplanner
 
 # A chart can be either an 'application' or a 'library' chart.
 #
