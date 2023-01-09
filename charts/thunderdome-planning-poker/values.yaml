@@ -22,10 +22,10 @@ postgresql:
 replicaCount: 1
 
 image:
-  repository: index.docker.io/annavarsatish/agilevoting  # {"$imagescan": "test-scan"}
+  repository: index.docker.io/annavarsatish/agileplanner  # {"$imagescan": "test-scan"}
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.1.0-1673263644-28e0219"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
