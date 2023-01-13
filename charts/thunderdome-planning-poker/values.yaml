@@ -19,7 +19,7 @@ image:
   repository: index.docker.io/annavarsatish/agileplanner # {"$imagescan": "test-scan"}
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "master-ff2052e-1673435186"
+  tag: "master-afdfc18-1673607887"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
@@ -73,10 +73,10 @@ ingress:
               name: agileplanner-thunderdome-planning-poker
               port:
                 number: 8080
-  tls: 
-   - secretName: secret-tls
-     hosts:
-       - agileplanner.improwised.com
+  tls:
+    - secretName: secret-tls
+      hosts:
+        - agileplanner.improwised.com
 gitresources: {}
 # We usually recommend not to specify default resources and to leave this as a conscious
 # choice for the user. This also increases chances charts run on environments with little
