@@ -19,7 +19,7 @@ image:
   repository: index.docker.io/annavarsatish/agileplanner # {"$imagescan": "test-scan"}
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "master-0369898-1674646869"
+  tag: "master-78e230d-1674653875"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
