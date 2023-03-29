@@ -16,6 +16,40 @@ entries:
     urls:
     - https://github.com/Annavar-satish/helm-charts/releases/download/agileplanner-0.1.2/agileplanner-0.1.2.tgz
     version: 0.1.2
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.0.12
+    created: "2023-03-29T06:49:45.959747962Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Open source, advanced key-value store. It is often referred to as
+      a data structure server since keys can contain strings, hashes, lists, sets
+      and sorted sets.
+    digest: efb2eddfd1297d33bf94118bd3e3ca40de359b435fe98484c61bf53b2e95e18d
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    - http://redis.io/
+    urls:
+    - https://github.com/Annavar-satish/helm-charts/releases/download/redis-12.10.1/redis-12.10.1.tgz
+    version: 12.10.1
   thunderdome-planning-poker:
   - apiVersion: v2
     appVersion: v2.27.0
@@ -32,4 +66,4 @@ entries:
     urls:
     - charts/thunderdome-planning-poker-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-23T14:09:29.161629626Z"
+generated: "2023-03-29T06:49:45.959756962Z"
