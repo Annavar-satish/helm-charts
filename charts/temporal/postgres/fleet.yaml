@@ -1,0 +1,23 @@
+defaultNamespace: temporal
+helm:
+  releaseName: postgres
+  repo: https://charts.bitnami.com/bitnami
+  chart: postgresql
+  version: 11.6.21
+  values:
+    global:
+      postgresql:
+        auth:
+          # postgres user password
+          postgresPassword: d&rPhq9*rb!Ztiw*Jb
+          username: temporal
+          password: x3sqjw8i7moe76lv
+          database: temporal
+
+    resources:
+      limits:
+        cpu: 550m
+        memory: 550Mi
+      requests:
+        cpu: 350m
+        memory: 350Mi
