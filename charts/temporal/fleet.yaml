@@ -1,0 +1,149 @@
+defaultNamespace: temporal
+helm:
+  releaseName: temporal
+  # repo:
+  chart: https://github.com/temporalio/helm-charts/archive/refs/tags/v1.17.1.tar.gz
+  # version:
+  values:
+    server:
+      enabled: true
+      image:
+        repository: temporalio/server
+        tag: 1.9.2
+        pullPolicy: IfNotPresent
+      replicaCount: 1
+      resources:
+        limits:
+          cpu: 600m
+          memory: 600Mi
+        requests:
+          cpu: 350m
+          memory: 350Mi
+      config:
+        persistence:
+          default:
+            driver: "sql"
+
+            sql:
+              driver: "postgres"
+              host: postgres-postgresql.temporal.svc
+              port: 5432
+              database: temporal
+              user: temporal
+              password: 1234as
+              tls:
+                enabled: false
+              maxConns: 6
+              maxIdleConns: 3
+              maxConnLifetime: 1h
+              maxQPS: 1000
+              # connectAttributes:
+              #   tx_isolation: READ-COMMITTED
+
+          visibility:
+            driver: "sql"
+
+            sql:
+              driver: "postgres"
+              host: postgres-postgresql.temporal.svc
+              port: 5432
+              database: temporal_visibility
+              user: temporal
+              password: 1234sev
+              tls:
+                enabled: false
+              maxConns: 6
+              maxIdleConns: 3
+              maxConnLifetime: 1h
+              maxQPS: 1000
+              # connectAttributes:
+              #   tx_isolation: READ-COMMITTED
+
+      frontend:
+        replicaCount: 1
+        resources:
+          limits:
+            cpu: 350m
+            memory: 350Mi
+          requests:
+            cpu: 250m
+            memory: 250Mi
+
+      history:
+        replicaCount: 1
+        resources:
+          limits:
+            cpu: 600m
+            memory: 600Mi
+          requests:
+            cpu: 350m
+            memory: 350Mi
+
+      matching:
+        replicaCount: 1
+        resources:
+          limits:
+            cpu: 350m
+            memory: 350Mi
+          requests:
+            cpu: 250m
+            memory: 250Mi
+
+      worker:
+        replicaCount: 1
+        resources:
+          limits:
+            cpu: 350m
+            memory: 350Mi
+          requests:
+            cpu: 250m
+            memory: 250Mi
+
+    admintools:
+      enabled: true
+      image:
+        repository: temporalio/admin-tools
+        tag: 1.9.2
+        pullPolicy: IfNotPresent
+
+    web:
+      enabled: true
+      image:
+        repository: temporalio/web
+        tag: 1.9.0
+        pullPolicy: IfNotPresent
+      replicaCount: 1
+      resources:
+        limits:
+          cpu: 350m
+          memory: 350Mi
+        requests:
+          cpu: 250m
+          memory: 250Mi
+
+    cassandra:
+      enabled: false
+
+    mysql:
+      enabled: false
+
+    elasticsearch:
+      enabled: false
+
+    prometheus:
+      enabled: false
+
+    kafka:
+      enabled: false
+
+    postgresql:
+      enabled: false
+
+    grafana:
+      enabled: false
+
+    schema:
+      setup:
+        enabled: false
+      update:
+        enabled: false
